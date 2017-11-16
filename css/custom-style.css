@@ -1,0 +1,46 @@
+
+/*Index*/
+
+#logoimg {
+	z-index: 1000; 
+	width: 300px; 
+	height: 300px; 
+	margin-bottom: 150px; 
+}
+
+#aboutUs {
+	width: 100%; 
+	
+}
+
+#aboutUsImg {
+	border:solid; 
+	width: 49%;  
+	z-index: 1000; 
+	margin: 20px 
+}
+
+#logoImg2 {
+	z-index: 1000;
+	width: 300px;
+	height: 300px;
+	margin-left: 30px;
+}
+
+
+
+/*Reservations*/
+
+.pupheading {
+	color: #696969;
+}
+
+.pupheading2 {
+	color: black;
+}
+
+#PDF {
+	font-size: 30px;
+	font-weight: bold;
+	font-color: red;
+}

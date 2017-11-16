@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<div id="convertPDF">
+<title>Reservations</title>
+<!--
+
+Template 2087 Kalay
+
+http://www.tooplate.com/view/2087-kalay
+
+-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="css/tooplate-style.css">
+
+<!-- CUSTOM CSS -->
+<link rel="stylesheet" href="css/custom-style.css">
+
+</head>
+<body>
+
+<!-- PRE LOADER -->
+<div class="preloader">
+     <div class="spinner">
+          <span class="spinner-rotate"></span>
+     </div>
+</div>
+
+
+<!-- HOME SECTION -->
+<section id="home" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-5 col-md-7 col-sm-12">
+                    <div class="home-thumb">
+                         <h1 class="wow fadeInUp" data-wow-delay="0.4s"></h1>
+                      <!--    <img style="z-index: 1000; width: 400px; heigth: 350px; " src="./images/logo1.png"> -->
+                         <p class="wow fadeInUp white-color" data-wow-delay="0.6s"> Make your reservations to have your pet stay with our family.</p>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section>
+<section id="service" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
+                    <!-- SECTION TITLE -->
+                    <h1 class="pupheading2">Reservations</h1><br><br><br>
+                    
+<div id="convertPDF">
+<h2 class="pupheading">General Info</h2><br>
+    <div id="puppy-info">
+        <form id="owner-form">
+    <!-- Form will be where users input data for there name and pets -->
+            <label style="margin-left: -24px" for="owner-name">Owner Name</label>
+            <input type="text" id="nameInput"><br><br>
+            <label for="pet-name">Pet Name</label>
+            <input type="text" id="petInput"><br><br>
+            <label type="text" id="drop-off">Drop Off</label>
+            <input type="text" id="dropOffInput">
+            <label type="text" id="pick-up">Pick Up</label>
+            <input type="text" id="pickUpInput">
+            <input type="button" class="submitTime" onclick="getGen()" value="Submit">
+
+           
+             <table class="gen-table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="ownerName"></td>
+                    <td id="NameofPet"></td>
+                    <td id="dropoff"></td>
+                    <td id="pickup"></td>
+                </tr>
+            </tbody>
+            </table>
+            <br><br>
+            
+            <h2 for="medication-info" class="pupheading">Medication Info</h2><br>
+            <label>Medication Name</label>
+            <input type="medication-name" id="medNameInput">
+            <label>How Often For the Medication</label>
+            <input type="medication-time" id="medTime">
+            <input type="button" class="submitMed" onclick="getwords()" value="Submit">
+            
+            <table class="med-table">
+                <thead>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="medName"></td>
+                    <td id="medOften"></td>
+                </tr>
+                
+            </tbody>
+            </table>
+            <br><br>
+
+            <h2 class="pupheading">Belongings</h2><br>
+            <label for="belongings">Item Name</label>
+            <input type="text" id="belongingInput">
+            <label for="belongings">Item Description</label>
+            <input type="text" id="belongingDescrInput">
+            <input type="button" class="submitBelong" onclick="getItems()" value="Submit">
+            
+             <table class="belongings-table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="itemName"></td>
+                    <td id="itemDescr"></td>
+                </tr>
+            </tbody>
+            </table><br><br>
+            
+            
+
+            <h2 class="pupheading">Feeding</h2><br>
+            <label for="brand">Brand Name</label>
+            <input type="text" id="brandInput">
+            <label for="Amount">Amount of Food</label>
+            <input type="text" id="foodAmountInput">
+            <label for="foodTime">Times a Day</label>
+            <input type="text" id="foodTimeADay">
+            <input type="button" class="submitFood" onclick="getFoods()" value="Submit">
+            <table class="foods-table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="brandName"></td>
+                    <td id="amountFood"></td>
+                    <td id="timeADayFood"></td> 
+                </tr>
+            </tbody>
+            </table><br><br>
+
+            
+
+            <h2 class="pupheading">Emergency Info</h2><br>
+            <label for="emergencyContact">Emergency Phone Number</label>
+            <input type="text" id="emergencyPhone">
+            <label for="emergencyAlternate">Alternative Phone Number</label>
+            <input type="text" id="emergencyAltPhone">
+            <input type="button" class="submitEmergCont" onclick="getEmerg()" value="Submit"><br><br>
+
+
+             <h2 class="pupheading">Emergency Contacts</h2><br>
+             <table class="emergency-table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="emergPhone"></td>
+                    <td id="emergPhone2"></td>
+                </tr>
+            </tbody>
+            </table>
+
+            <p>In the event of an emergency while your pet is under our care and you cannot be reached, please list an additional contact that can speak on your consent.</p>
+
+            <label for="personalContact">Name</label>
+            <input type="text" id="personalContactName">
+            <label for="personalContactPhone">Phone Number</label>
+            <input type="text" id="personalContactNumber">
+            <label for="personalContactAlt">Alternative Number</label>
+            <input type="text" id="personalContactAltNumber">
+            <input type="button" class="submitConsent" onclick="getConsent()" value="Submit">
+
+            
+            <table class="consent-table">
+                <thead>
+                <tr>
+                    <th id="consentName"></th>
+                    <th id="consentPhone"></th>
+                    <th id="consentPhonedos"></th>
+                </tr>
+            </thead>
+            <tbody>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+            </tbody>
+            </table>
+
+            <br><br>
+            <h2 class="pupheading">Please list your veterinarian information</h2><br>
+
+            <label for="vetStuff">Veterinarian Office</label>
+            <input type="text" id="vetOfficeInput">
+            <label for="vetPhone">Contact Info</label>
+            <input type="text" id="vetContact">
+            <label for="vetAddress">Address</label>
+            <input type="text" id="vetAdd">
+            <input type="button" class="submitConsent" onclick="getVet()" value="Submit"><br> 
+            <br>
+            <table class="vet-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="vetName"></td>
+                    <td id="vetPhone"></td>
+                    <td id="vetAddr"></td> 
+                </tr>
+            </tbody>
+            </table>
+
+
+            <!--Work on this -->
+            <p>In the event your pet would need a veterinarian please check on of the below options:</p>
+
+            <p>A. Treat My Pet Up To: $______ (Please Specify Amount)</p>
+            <p>B. Whatever Treatment Required</p>
+            <p>C. No Treatment</p>
+            <p>Example input:  A. $1,500.00</p>
+
+            <label for="treatmentDesired">Requested Treatment Type:</label>
+            <input type="text" id="treatmentInput">
+            <input type="button" class="treatSubmit" onclick="getTreatment()" value="Submit"> 
+             
+
+
+          <table class="treatment-table">
+            <thead>
+                <tr>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td id="treatmentType">
+              </tr>
+            </tbody>
+          </table>
+          <!-- -->
+
+          <br><br>
+          <h2 class="pupheading">Your Pets Health</h2><br>
+          <p>For your pet and others pets health we require all vaccines to be current. Please provide appropriate records. Dogs must have the Parvo, Bordetella , and Canine Influenza vaccines annually and Rabies every 1-3 years. (Must have copy on file)</p>
+          
+          <label>Records Up To Date Yes/No</label>
+          <input type="text" id="recordYN">
+          <label>Record Date:</label>
+          <input type="text" id="recordDate">
+          <input type="button" class="submitRec" onclick="getRec()" value="Submit">
+
+          <table class="record-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="recConfirm"></td>
+                    <td id="recDate"></td>
+                </tr>
+            </tbody>
+            </table>
+        
+        <!-- Work on this -->
+        
+          <br><br>
+          <h2 class="pupheading">Bathing</h2><br>
+        <p>All pets will be given a complimentary bath if playtime gets a little messy! If your pet has any allergic reactions to certain scents, please let us know. If you would prefer us not bathe your pet, please let us know.</p>
+        
+        <p>A. My Pet has certain allergies to certain scents (Specify Allergy)</p>
+        <p>B. My Pet has not allergic reactions to scents</p>
+        <p>C. I would prefer you not to not bathe my Pet.</p>
+        <p>Example input: A. (chocolate)</p>
+
+        <label>Preffered Bathing Option:</label>
+        <input type="text" id="bathInput">
+        <input type="button" class="submitBath" onclick="getBath()" value="Submit">
+
+        <table class="bath-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="bathConfirm"></td>
+                    
+                </tr>
+            </tbody>
+            </table>
+        
+        <!-- Work on this -->
+         <br><br>
+         <h2 class="pupheading">Updates</h2><br>
+         
+           
+           <!-- Work on this --> 
+          <p>If you chose to receive updates, please indicate below how you would like to receive your pet update. (Texting and data rates may apply)</p>
+          <p>A. I would like to receive updates (Morning, Afternoon, Evening)</p>
+          <p>B. No Updates.</p>
+          <p>Example Input: A. Morning,Evening</p>
+
+          <p>If you have opted for a text or email update, would you like photo or video updates of the fun time your pet or pets are having? (Texting and data rates may apply)</p>
+
+          <label>Updates</label>
+          <input type="text" id="updateInput1">
+          <label>Update Type:</label>
+          <input type="text" id="updateInput2">
+          <input type="button" class="submitUpdate1" onclick="getUpdate1()" value="Submit">
+
+          <table class="update-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th> 
+                    </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="updateConfirm1"></td>
+                    <td id="updateConfirm2"></td>
+                </tr>
+            </tbody>
+            </table>
+            
+    </div>
+    
+    </div>
+
+    <br><br>
+    <input type="button" onclick="HTMLtoPDF()" value="Complete">
+ <script src="js/pdfFromHTML.js"></script>   
+ <script src="js/jspdf.js"></script>
+ <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script> 
+  <script type="text/javascript">
+     function getGen() {
+        text = nameInput.value;
+        document.getElementById("ownerName").innerHTML += '<td>'+text
+        document.getElementById("nameInput").value = "" 
+
+        text = petInput.value;
+        document.getElementById("NameofPet").innerHTML += '<td>'+text
+        document.getElementById("petInput").value = ""
+
+        text = dropOffInput.value;
+        document.getElementById("dropoff").innerHTML += '<td>'+text
+        document.getElementById("dropOffInput").value = ""
+
+        text = pickUpInput.value;
+        document.getElementById("pickup").innerHTML += '<td>'+text
+        document.getElementById("pickUpInput").value = ""
+    }  
+
+    function getwords() {
+        text = medNameInput.value;
+        document.getElementById("medName").innerHTML += '<td>'+text
+        document.getElementById("medNameInput").value = "" 
+
+        text = medTime.value;
+        document.getElementById("medOften").innerHTML += '<td>'+text
+        document.getElementById("medTime").value = ""
+    }  
+
+    function getItems() {
+        text = belongingInput.value;
+        document.getElementById("itemName").innerHTML += '<td>'+text
+        document.getElementById("belongingInput").value = "" 
+
+        text = belongingDescrInput.value;
+        document.getElementById("itemDescr").innerHTML += '<td>'+text
+        document.getElementById("belongingDescrInput").value = ""
+    }  
+
+    function getFoods() {
+        text = brandInput.value;
+        document.getElementById("brandName").innerHTML += '<td>'+text
+        document.getElementById("brandInput").value = "" 
+
+        text = foodAmountInput.value;
+        document.getElementById("amountFood").innerHTML += '<td>'+text
+        document.getElementById("foodAmountInput").value = ""
+
+        text = foodTimeADay.value;
+        document.getElementById("timeADayFood").innerHTML += '<td>'+text
+        document.getElementById("foodTimeADay").value = "" 
+    }
+
+    function getEmerg() {
+        text = emergencyPhone.value;
+        document.getElementById("emergPhone").innerHTML += '<td>'+text
+        document.getElementById("emergPhone").value = "" 
+
+        text = emergencyAltPhone.value;
+        document.getElementById("emergPhone2").innerHTML += '<td>'+text
+        document.getElementById("emergAltPhone").value = ""
+
+        }  
+
+    function getConsent() {
+        text = personalContactName.value;
+        document.getElementById("consentName").innerHTML += '<td>'+text
+        document.getElementById("personalContactName").value = "" 
+
+        text = personalContactNumber.value;
+        document.getElementById("consentPhone").innerHTML += '<td>'+text
+        document.getElementById("personalContactNumber").value = ""
+
+        text = personalContactAltNumber.value;
+        document.getElementById("consentPhonedos").innerHTML += '<td>'+text
+        document.getElementById("personalContactAltNumber").value = "" 
+    }
+
+    function getVet() {
+        text = vetOfficeInput.value;
+        document.getElementById("vetName").innerHTML += '<td>'+text
+        document.getElementById("vetOfficeInput").value = "" 
+
+        text = vetContact.value;
+        document.getElementById("vetPhone").innerHTML += '<td>'+text
+        document.getElementById("vetContact").value = ""
+
+        text = vetAdd.value;
+        document.getElementById("vetAddr").innerHTML += '<td>'+text
+        document.getElementById("vetAdd").value = "" 
+    }
+
+    function getRec() {
+      text = recordYN.value;
+      document.getElementById("recConfirm").innerHTML += '<td>'+text
+      document.getElementById("recordYN").value = "" 
+
+      text = recordDate.value;
+      document.getElementById("recDate").innerHTML += '<td>'+text
+      document.getElementById("recordDate").value = "" 
+    }
+
+    
+    function getTreatment() {
+        text = treatmentInput.value;
+        document.getElementById("treatmentType").innerHTML += '<td>'+text
+        document.getElementById("treatmentInput").value = "" 
+
+    }
+
+    function getBath() {
+        text = bathInput.value;
+        document.getElementById("bathConfirm").innerHTML += '<td>'+text
+        document.getElementById("bathInput").value = "" 
+    }
+    
+    function getUpdate1() {
+      text = updateInput1.value;
+      document.getElementById("updateConfirm1").innerHTML += '<td>'+text
+      document.getElementById("updateInput1").value = "" 
+
+      text = updateInput2.value;
+      document.getElementById("updateConfirm2").innerHTML += '<td>'+text
+      document.getElementById("updateInput2").value = "" 
+
+    }    
+      
+    
+</script>
+
+
+
+
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
+
+
